@@ -31,6 +31,7 @@ function permAlone(str) {
   else{
     pre = permutation_list
   }
+  console.log(str, pre.length);
   return pre.length;
 }
 
@@ -42,4 +43,12 @@ const permutation = function (array) {
     , [])
 }
 
-permAlone('1234');
+permAlone("aab") //should return 2.
+permAlone("aaa") //should return 0.
+permAlone("aabb") //should return 8.
+permAlone("abcdefa") //should return 3600.
+permAlone("abfdefa") //should return 2640.
+permAlone("zzzzzzzz") //should return 0.
+permAlone("a") //should return 1.
+permAlone("aaab") //should return 0.
+permAlone("aaabb") //should return 12.
