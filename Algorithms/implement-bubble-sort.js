@@ -12,34 +12,51 @@ function bubbleSort(array) {
   const sorted = array.reduce(function (p, c) {
     // include the first element in accumulate
     if (p.length === 0) {
-      p.push(c)
+      p.push(c);
     } else {
       // validate always the last value in accumulate, is the biggest
-      const last = p[p.length - 1]
+      const last = p[p.length - 1];
       // validate if current value is greater than last in array
       if (c >= last) {
-        p.push(c)
-      }
-      else {
-        let index = 0
+        p.push(c);
+      } else {
+        let index = 0;
         // find the position where the current value is bigger than previous
         for (let x = p.length - 1; x >= 0; x--) {
           if (c >= p[x]) {
-            index = c >= 0 ? x + 1 : x
-            break
+            index = c >= 0 ? x + 1 : x;
+            break;
           }
         }
         // insert the current value in correct position
-        p.splice(index, 0, c)
+        p.splice(index, 0, c);
       }
     }
-    return p
-  }, [])
+    return p;
+  }, []);
 
-  console.log(sorted)
+  console.log(sorted);
   return sorted;
   // Only change code above this line
 }
 
-bubbleSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92])
-bubbleSort([-1,34, 0, 2,-2])
+bubbleSort([
+  1,
+  4,
+  2,
+  8,
+  345,
+  123,
+  43,
+  32,
+  5643,
+  63,
+  123,
+  43,
+  2,
+  55,
+  1,
+  234,
+  92,
+]);
+bubbleSort([-1, 34, 0, 2, -2]);
