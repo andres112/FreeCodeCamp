@@ -36,6 +36,9 @@ function solution(A) {
   if (N % 2 === 0) {
     return -1;
   }
+  if (N === 1) {
+    return A[0];
+  }
   const groups = A.reduce((a, c) => {
     a[c] = (a[c] || 0) + 1;
     return a;
